@@ -1,17 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tech\\source\\repos\\Personal Task Manager\\",
+  "WorkspaceRootPath": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|c:\\users\\tech\\source\\repos\\personal task manager\\infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|c:\\users\\tech\\source\\repos\\test\\personal-task-manager\\personal task manager\\personal task manager\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|solutionrelative:personal task manager\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|c:\\users\\tech\\source\\repos\\test\\personal-task-manager\\personal task manager\\personal task manager\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|solutionrelative:personal task manager\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|c:\\users\\tech\\source\\repos\\test\\personal-task-manager\\personal task manager\\infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9FB1AB33-E513-448D-8118-A02AF6E91FF0}|Business Logic\\Business Logic.csproj|c:\\users\\tech\\source\\repos\\personal task manager\\business logic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9FB1AB33-E513-448D-8118-A02AF6E91FF0}|Business Logic\\Business Logic.csproj|c:\\users\\tech\\source\\repos\\test\\personal-task-manager\\personal task manager\\business logic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9FB1AB33-E513-448D-8118-A02AF6E91FF0}|Business Logic\\Business Logic.csproj|solutionrelative:business logic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1D681DD-B6B1-4AF5-93FB-EC818C4F6F78}|Domain\\Domain.csproj|c:\\users\\tech\\source\\repos\\personal task manager\\domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C1D681DD-B6B1-4AF5-93FB-EC818C4F6F78}|Domain\\Domain.csproj|c:\\users\\tech\\source\\repos\\test\\personal-task-manager\\personal task manager\\domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1D681DD-B6B1-4AF5-93FB-EC818C4F6F78}|Domain\\Domain.csproj|solutionrelative:domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -87,10 +95,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Personal Task Manager\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Personal Task Manager\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwAYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T18:43:10.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "Personal Task Manager\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\WeatherForecast.cs",
+              "RelativeToolTip": "Personal Task Manager\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T18:42:47.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\tech\\source\\repos\\Personal Task Manager\\Infrastructure\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\Class1.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Class1.cs",
-              "ToolTip": "C:\\Users\\tech\\source\\repos\\Personal Task Manager\\Infrastructure\\Class1.cs",
+              "ToolTip": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\Class1.cs",
               "RelativeToolTip": "Infrastructure\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -99,29 +133,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\tech\\source\\repos\\Personal Task Manager\\Business Logic\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Business Logic\\Class1.cs",
               "RelativeDocumentMoniker": "Business Logic\\Class1.cs",
-              "ToolTip": "C:\\Users\\tech\\source\\repos\\Personal Task Manager\\Business Logic\\Class1.cs",
+              "ToolTip": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Business Logic\\Class1.cs",
               "RelativeToolTip": "Business Logic\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T20:40:16.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T20:40:16.152Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\tech\\source\\repos\\Personal Task Manager\\Domain\\Class1.cs",
+              "DocumentMoniker": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Domain\\Class1.cs",
               "RelativeDocumentMoniker": "Domain\\Class1.cs",
-              "ToolTip": "C:\\Users\\tech\\source\\repos\\Personal Task Manager\\Domain\\Class1.cs",
+              "ToolTip": "C:\\Users\\tech\\source\\repos\\test\\Personal-Task-Manager\\Personal Task Manager\\Domain\\Class1.cs",
               "RelativeToolTip": "Domain\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T20:39:06.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T20:39:06.171Z"
             }
           ]
         }

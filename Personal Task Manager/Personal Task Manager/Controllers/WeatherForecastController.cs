@@ -29,5 +29,10 @@ namespace Personal_Task_Manager.Controllers
             })
             .ToArray();
         }
+        [HttpGet("Test")]
+        public string Test()
+        {
+            return "Test successful!";
+        }
     }
 }

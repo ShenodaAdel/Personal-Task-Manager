@@ -1,0 +1,43 @@
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\appsettings.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Personal Task Manager.staticwebassets.endpoints.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Personal Task Manager.exe
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Personal Task Manager.deps.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Personal Task Manager.runtimeconfig.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Personal Task Manager.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Personal Task Manager.pdb
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Business Logic.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Domain.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Business Logic.pdb
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\bin\Debug\net8.0\Domain.pdb
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.csproj.AssemblyReference.cache
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.AssemblyInfoInputs.cache
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.AssemblyInfo.cs
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.csproj.CoreCompileInputs.cache
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.sourcelink.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\scopedcss\bundle\Personal Task Manager.styles.css
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets\msbuild.Personal Task Manager.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets\msbuild.Personal Task Manager.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets\msbuild.build.Personal Task Manager.props
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Personal Task Manager.props
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Personal Task Manager.props
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal.E3A19635.Up2Date
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\refint\Personal Task Manager.dll
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.pdb
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\Personal Task Manager.genruntimeconfig.cache
+C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Personal Task Manager\obj\Debug\net8.0\ref\Personal Task Manager.dll
