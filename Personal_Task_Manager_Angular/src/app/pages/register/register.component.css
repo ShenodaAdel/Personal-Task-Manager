@@ -1,0 +1,225 @@
+
+section {
+  display: flex;
+  height: 100vh;
+}
+
+.form-section {
+  width: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.form-wrapper {
+  width: 80%;
+  max-width: 400px;
+}
+
+.form-wrapper h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color:#007bff;
+}
+
+.form-wrapper p {
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.form-wrapper p a {
+  color: #007bff;
+  text-decoration: none;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+.inputBox {
+  margin-bottom: 1.2rem;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.inputBox input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.input-icon-wrapper {
+  position: relative;
+}
+
+.input-icon-wrapper i {
+  position: absolute;
+  top: 50%;
+  right: 12px; /* خليها في اليمين */
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 16px;
+  pointer-events: none; /* عشان الماوس ميأثرش عليها */
+}
+
+.input-icon-wrapper input {
+  width: 100%;
+  padding: 12px 36px 12px 12px; /* padding-right علشان تسيب مساحة للأيقونة */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-icon-wrapper input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+   background-color: #0056b3;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+
+   background-color: #007bff;
+}
+
+
+.image-section {
+  width: 50%;
+  background-color: #E6F0FF; /* لون قريب من الأزرق الفاتح */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  overflow: hidden;
+  
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.image-section img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.google-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
+  color: #888;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider::before {
+  margin-right: 0.5em;
+}
+
+.divider::after {
+  margin-left: 0.5em;
+}
+
+
+
+
+
+.signup-btn {
+  background: linear-gradient(135deg, #f76300, #ff9900); /* برتقالي مميز */
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.signup-btn:hover {
+  background: linear-gradient(135deg, #ff9900, #f76300);
+}
+
+/* Google button hover tweak */
+.google-btn:hover {
+  background-color: #f7f7f7;
+}
+
+/* Divider line tweak */
+.divider {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+
+  .form-section,
+  .image-section {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .image-section {
+    padding: 1rem;
+    border-radius: 0 0 40px 40px;
+  }
+
+  .form-wrapper {
+    max-width: 100%;
+  }
+
+  .form-wrapper h1 {
+    text-align: center;
+  }
+}
+
+
+
