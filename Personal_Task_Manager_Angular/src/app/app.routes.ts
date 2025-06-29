@@ -32,17 +32,16 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/tasks/tasks.component').then(m => m.TasksComponent)
             },
             {
+                path: 'update-task',
+                loadComponent: () => import('./pages/update-task/update-task.component').then(m => m.UpdateTaskComponent)
+            },
+            {
                 path:'completed',
                 loadComponent: () => import('./pages/completed/completed.component').then(m => m.CompletedComponent)    
             },
             {
                 path:'postponed',
                 loadComponent: () => import('./pages/postponed/postponed.component').then(m => m.PostponedComponent)    
-
-            },
-            {
-                path:'add-new-task',
-                loadComponent: () => import('./pages/add-new-task/add-new-task.component').then(m => m.AddNewTaskComponent)
 
             },
             {
@@ -60,6 +59,10 @@ export const routes: Routes = [
             {
                 path: 'setting',   
                 loadComponent: () => import('./pages/setting/setting.component').then(m => m.SettingComponent)   
+            }
+            ,{
+                path: 'contact-us',
+                loadComponent: () => import('./pages/contact-us/contact-us.component').then(m => m.ContactUsComponent)
             }
            
         ]

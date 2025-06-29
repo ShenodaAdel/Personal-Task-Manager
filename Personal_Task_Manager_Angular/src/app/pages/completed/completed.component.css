@@ -27,7 +27,9 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #2a2185;
+      color: #007bff;
+      font-size: 30px;
+   
     }
 
     .search-box {

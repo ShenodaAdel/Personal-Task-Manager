@@ -62,7 +62,7 @@
           <td>2025-06-27</td>
           <td class="actions">
             <button class="view">View</button>
-            <button class="edit">Edit</button>
+            <button class="edit" routerLink="/update-task">Edit</button>
             <button class="delete">Delete</button>
           </td>
         </tr>
@@ -72,7 +72,7 @@
           <td>2025-06-25</td>
           <td class="actions">
             <button class="view">View</button>
-            <button class="edit">Edit</button>
+            <button class="edit" routerLink="/update-task">Edit</button>
             <button class="delete">Delete</button>
           </td>
         </tr>
@@ -82,7 +82,7 @@
           <td>2025-06-22</td>
           <td class="actions">
             <button class="view">View</button>
-            <button class="edit">Edit</button>
+            <button class="edit" routerLink="/update-task">Edit</button>
             <button class="delete">Delete</button>
           </td>
         </tr>
@@ -90,7 +90,11 @@
     </table>
 
     <div class="add-task">
-      <button class="add-btn"><i class="fas fa-plus"></i> Add Task</button>
+     
+      <button class="add-btn" (click)="openModal()">
+  <i class="fas fa-plus"></i> Add Task
+</button>
+
     </div>
   </div>
 
@@ -126,3 +130,43 @@
 </div>
 
 </div>
+
+  <!-- Modal Form -->
+  <div class="modal" id="taskModal" *ngIf="isOpen">
+    <form class="modal-content">
+      <span class="close-btn" id="closeModal" (click)="closeModal()">&times;</span>
+      <h2>Add New Task</h2>
+
+      <label for="taskName"><i class="fas fa-tasks label-icon"></i> Task Name</label>
+<input id="taskName" type="text" placeholder="Enter task name" [(ngModel)]="taskName" name="taskName" required>
+
+<label for="startDate"><i class="fas fa-play label-icon"></i> Start Date</label>
+<input id="startDate" type="date" [(ngModel)]="startDate" name="startDate" required>
+
+<label for="deadline"><i class="fas fa-hourglass-end label-icon"></i> Deadline</label>
+<input id="deadline" type="date" [(ngModel)]="deadline" name="deadline" required>
+
+<label for="description"><i class="fas fa-align-left label-icon"></i> Description</label>
+<textarea id="description" placeholder="Enter task description" [(ngModel)]="description" name="description" required></textarea>
+
+<label for="fileUpload"><i class="fas fa-paperclip label-icon"></i> Attach File</label>
+<input id="fileUpload" type="file" (change)="onFileChange($event)">
+
+<label for="category"><i class="fas fa-list label-icon"></i> Category</label>
+<select id="category" [(ngModel)]="category" name="category" required>
+  <option value="">Select Category</option>
+  <option value="Management">Management</option>
+  <option value="Development">Development</option>
+  <option value="Design">Design</option>
+  <option value="Audit">Audit</option>
+</select>
+
+<!-- زر الحفظ -->
+<button (click)="submitTask()" class="add-task-btn">Save Task</button>
+
+    </form>
+  </div>
+
+   <div class="container" id="taskContainer">
+    <!-- Tasks will appear here -->
+  </div>

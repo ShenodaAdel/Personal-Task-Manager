@@ -1,1 +1,43 @@
-<p>setting works!</p>
+<div class="edit-profile-container">
+  <h3 class="section-title">Edit Profile</h3>
+
+  <div class="profile-card">
+    <div class="left-side">
+      <div class="avatar">
+        <img [src]="imagePreview" alt="Profile Picture">
+      </div>
+
+      <div class="upload-buttons">
+        <label class="upload-btn">
+          <input type="file" class="upload-input" (change)="onFileUpload($event)" />
+          <i class="fas fa-upload"></i>
+          <span>Upload Document</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="form-group">
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="userName" name="userName">
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="email" name="email">
+      </div>
+      <div class="form-group">
+        <label>Phone Number:</label>
+        <input type="text" [(ngModel)]="phoneNumber" name="phoneNumber">
+      </div>
+      <div class="form-group">
+        <label>Address:</label>
+        <input type="text" [(ngModel)]="address" name="address">
+      </div>
+
+      <div class="action-buttons">
+        <button class="save-btn" (click)="saveProfile()">SAVE</button>
+        <button class="cancel-btn" type="button" routerLink="/profile">CANCEL</button>
+      </div>
+    </div>
+  </div>
+</div>

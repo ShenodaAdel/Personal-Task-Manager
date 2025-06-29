@@ -207,29 +207,58 @@ label {
 }
 
 /* === Responsive Design === */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   section {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
   }
 
-  .form-section,
   .image-section {
+    display: none;
+  }
+
+  .form-section {
     width: 100%;
-    height: auto;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .image-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
-    border-radius: 0 0 40px 40px;
   }
 
   .form-wrapper {
-    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
   }
 
-  .form-wrapper h1 {
+  .form-wrapper h1,
+  .form-wrapper p {
     text-align: center;
   }
+}
+.alert-danger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fef1f1; /* لون خلفية هادي */
+  border: 1px solid #f5c2c7;
+  border-left: 6px solid #dc3545; /* شريط جانبي أحمر */
+  color: #b02a37;
+  padding: 12px 16px;
+  border-radius: 12px; /* كيرف ناعم */
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* ظل خفيف */
+}
+
+.alert-danger i {
+  font-size: 18px;
+  color: #dc3545;
+}
+.alert-danger p {
+  margin: 0;
+  flex: 1; /* عشان النص ياخد المساحة المتاحة */
 }
