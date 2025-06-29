@@ -14,3 +14,19 @@ C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Busi
 C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\refint\Business Logic.dll
 C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.pdb
 C:\Users\tech\source\repos\test\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\ref\Business Logic.dll
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\bin\Debug\net8.0\Business Logic.deps.json
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\bin\Debug\net8.0\Business Logic.dll
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\bin\Debug\net8.0\Business Logic.pdb
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\bin\Debug\net8.0\Domain.dll
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\bin\Debug\net8.0\Domain.pdb
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.csproj.AssemblyReference.cache
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.AssemblyInfoInputs.cache
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.AssemblyInfo.cs
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.csproj.CoreCompileInputs.cache
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.sourcelink.json
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business.31A8D8CC.Up2Date
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.dll
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\refint\Business Logic.dll
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\Business Logic.pdb
+C:\Users\User\Source\Repos\Personal-Task-Manager\Personal Task Manager\Business Logic\obj\Debug\net8.0\ref\Business Logic.dll
