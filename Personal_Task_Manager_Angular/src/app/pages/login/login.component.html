@@ -1,90 +1,89 @@
+<section>
 
-  <section>
-
-    <div class="image-section">
-      <img src="/image/signIn.png" alt="signin illustration" />
-    </div>
-
-
-    <div class="form-section">
-      <div class="form-wrapper">
-        <h1>Welcome Back!</h1>
-        <p>Don't have an account? <a routerLink="/register">Sign Up</a></p>
-
-        <form [formGroup]="login" (ngSubmit)="submitForm()">
-          <div class="inputBox">
-            <label>
-              E-Mail
-              <div class="input-icon-wrapper">
-                <input type="email" placeholder="Enter your email" formControlName="email" />
-                <i class="fa fa-envelope"></i>
-
-              </div>
-            </label>
-
-            @if (login.get('email')?.errors && login.get('email')?.touched) {
-  @if (login.get('email')?.getError('required')) {
-    <div class="alert-danger">
-      <i class="fas fa-circle-exclamation"></i>
-      Email is required
-    </div>
-  }
-  @else if (login.get('email')?.getError('email')) {
-    <div class="alert-danger">
-      <i class="fas fa-circle-exclamation"></i>
-      Invalid email format
-    </div>
-  }
-}
+  <div class="image-section">
+    <img src="/image/signIn.png" alt="signin illustration" />
+  </div>
 
 
- 
-           
+  <div class="form-section">
+    <div class="form-wrapper">
+      <h1>Welcome Back!</h1>
+      <p>Don't have an account? <a routerLink="/register">Sign Up</a></p>
+
+      <form [formGroup]="login" (ngSubmit)="submitForm()">
+        <div class="inputBox">
+          <label>
+            E-Mail
+            <div class="input-icon-wrapper">
+              <input type="email" placeholder="Enter your email" formControlName="email" />
+              <i class="fa fa-envelope"></i>
+
+            </div>
+          </label>
+
+          @if (login.get('email')?.errors && login.get('email')?.touched) {
+          @if (login.get('email')?.getError('required')) {
+          <div class="alert-danger">
+            <i class="fas fa-circle-exclamation"></i>
+            Email is required
           </div>
-
-          <div class="inputBox">
-            <label>
-              Password
-              <div class="input-icon-wrapper">
-                <input type="password" placeholder="Enter your password" formControlName="password" />
-                <i class="fa fa-lock"></i>
-              </div>
-            </label>
-            @if (login.get('password')?.errors && login.get('password')?.touched) {
-  @if (login.get('password')?.getError('required')) {
-    <div class="alert-danger">
-      <i class="fas fa-circle-exclamation"></i>
-      Password is required
-    </div>
-  } 
-  @else if (login.get('password')?.getError('pattern')) {
-    <div class="alert-danger">
-      <i class="fas fa-circle-exclamation"></i>
-      
-      <ul style="margin-top: 5px; padding-left: 1rem;">
-        Password must:
-        <li>Start with an uppercase letter</li>
-        <li>Contain at least one lowercase letter</li>
-        <li>Contain at least one number</li>
-        <li>Contain at least one special character</li>
-        <li>Be at least 8 characters long</li>
-      </ul>
-    </div>
-  }
-}
-
-            
+          }
+          @else if (login.get('email')?.getError('email')) {
+          <div class="alert-danger">
+            <i class="fas fa-circle-exclamation"></i>
+            Invalid email format
           </div>
+          }
+          }
 
-          <button type="submit" class="signup-btn">Sign In</button>
-        </form>
 
-        <div class="divider"><span>or</span></div>
 
-        <button class="google-btn">
-          <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="google icon"/>
-          Sign in with Google
-        </button>
-      </div>
+
+        </div>
+
+        <div class="inputBox">
+          <label>
+            Password
+            <div class="input-icon-wrapper">
+              <input type="password" placeholder="Enter your password" formControlName="password" />
+              <i class="fa fa-lock"></i>
+            </div>
+          </label>
+          @if (login.get('password')?.errors && login.get('password')?.touched) {
+          @if (login.get('password')?.getError('required')) {
+          <div class="alert-danger">
+            <i class="fas fa-circle-exclamation"></i>
+            Password is required
+          </div>
+          }
+          @else if (login.get('password')?.getError('pattern')) {
+          <div class="alert-danger">
+            <i class="fas fa-circle-exclamation"></i>
+
+            <ul style="margin-top: 5px; padding-left: 1rem;">
+              Password must:
+              <li>Start with an uppercase letter</li>
+              <li>Contain at least one lowercase letter</li>
+              <li>Contain at least one number</li>
+              <li>Contain at least one special character</li>
+              <li>Be at least 8 characters long</li>
+            </ul>
+          </div>
+          }
+          }
+
+
+        </div>
+
+        <button type="submit" class="signup-btn">Sign In</button>
+      </form>
+
+      <div class="divider"><span>or</span></div>
+
+      <button class="google-btn">
+        <img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="google icon" />
+        Sign in with Google
+      </button>
     </div>
-  </section>
+  </div>
+</section>

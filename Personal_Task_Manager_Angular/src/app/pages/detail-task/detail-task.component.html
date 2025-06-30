@@ -1,1 +1,46 @@
+<div class="task-detail-card">
+  <!-- اسم المهمة -->
+  <h2 class="task-title"><i class="fas fa-tasks"></i> Social Media Campaign</h2>
 
+  <!-- الوصف -->
+  <div class="description-block">
+    <i class="fas fa-align-left label-icon"></i>
+    <img [src]="task.AttachedFile" alt="Task Image">
+  </div>
+
+  <!-- باقي البيانات 2 عمود -->
+  <div class="info-grid">
+     <div class="info-item">
+      <i class="fas fa-folder-open label-icon"></i>
+      <strong>Category:</strong> {{task.TaskName}}
+    </div>
+     <div class="info-item">
+      <i class="fas fa-folder-open label-icon"></i>
+      <strong>Category:</strong> {{task.Description}}
+    </div>
+   
+     <div class="info-item">
+      <i class="fas fa-clock label-icon"></i>
+      <strong>Time:</strong> {{task.StartDate}}
+    </div>
+ 
+    <div class="info-item">
+      <i class="fas fa-calendar-alt label-icon"></i>
+      <strong>Due Date:</strong> {{task.Deadline}}
+    </div>
+   
+
+    
+  </div>
+
+  <!-- الأزرار -->
+  <div class="task-buttons-split">
+    <button class="delete-btn" (click)="deleteTask()">
+      <i class="fas fa-trash"></i> Delete Task
+    </button>
+
+    <button class="edit-profile-btn" routerLink="/update-task">
+      <i class="fas fa-pen"></i> Edit Task
+    </button>
+  </div>
+</div>

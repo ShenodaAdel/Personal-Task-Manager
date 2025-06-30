@@ -59,11 +59,9 @@
 /* ========== Page Wrapper ========== */
 
 
-
-
-
 .page-wrapper {
   display: flex;
+  
   gap: 20px;
   align-items: flex-start;
 }
@@ -104,11 +102,12 @@
 }
 
 table {
-  width: 100%;
+  width: auto;
   border-collapse: collapse;
 }
 
 thead {
+  
   background-color: #007bff;
   color: white;
 }
@@ -140,7 +139,11 @@ th, td {
   background: #e2e3e5;
   color: #6c757d;
 }
-
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .actions button {
   margin-right: 6px;
   padding: 5px 10px;

@@ -32,8 +32,12 @@ export const routes: Routes = [
                 loadComponent: () => import('./pages/tasks/tasks.component').then(m => m.TasksComponent)
             },
             {
-                path: 'update-task',
+                path: 'update-task/:id',
                 loadComponent: () => import('./pages/update-task/update-task.component').then(m => m.UpdateTaskComponent)
+            },
+            {
+                path: 'detail-task/:id',
+                loadComponent: () => import('./pages/detail-task/detail-task.component').then(m => m.DetailTaskComponent)
             },
             {
                 path:'completed',

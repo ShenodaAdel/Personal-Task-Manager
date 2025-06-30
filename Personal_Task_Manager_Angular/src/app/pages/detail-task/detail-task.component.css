@@ -1,0 +1,84 @@
+.task-detail-card {
+  max-width: 900px;
+  background-color: #fff;
+  padding: 40px 50px;
+  margin: 50px auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.task-title {
+  font-size: 28px;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.description-block {
+  padding: 10px 16px;
+  border-left: 4px solid #007bff;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+  color: #333;
+  font-size: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 30px;
+}
+
+.info-item {
+  font-size: 15px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label-icon {
+  color: #007bff;
+}
+
+.task-buttons-split {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.task-buttons-split button {
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background-color: #f8f9fa;
+}
+
+.edit-profile-btn {
+  color: #007bff;
+  border-color: #007bff;
+  background-color: white;
+}
+
+
+
+.delete-btn {
+  color: #dc3545;
+  border-color: #dc3545;
+  background-color: white;
+}
+

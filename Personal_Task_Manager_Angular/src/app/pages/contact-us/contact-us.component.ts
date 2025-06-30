@@ -18,7 +18,7 @@ export class ContactUsComponent {
     country_code: new FormControl('+20', [Validators.required]),
     phone: new FormControl(null, [
       Validators.required,
-      Validators.pattern('^[0-9]{15}$')
+      Validators.pattern('^[0-9]{11}$')
     ]),
     message: new FormControl(null, [Validators.required, Validators.minLength(10)]),
   });
