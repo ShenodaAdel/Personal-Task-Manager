@@ -4,5 +4,6 @@ export interface ITask {
   Deadline: string;
   Description: string;
   Category: string;
+  Status: string;
   AttachedFile: string; 
 }

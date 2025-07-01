@@ -102,7 +102,7 @@
 }
 
 table {
-  width: auto;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -113,17 +113,26 @@ thead {
 }
 
 th, td {
+  width: auto;
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
+td .status-cell {
+  display: flex;
+  align-items: center;
+}
+
 
 .status {
-  padding: 4px 10px;
+  display: inline-block; 
+  padding: 6px 12px;
   border-radius: 12px;
   font-size: 13px;
   font-weight: bold;
+  margin: auto;
 }
+
 
 .status.complete {
   background: #d4edda;
@@ -135,7 +144,7 @@ th, td {
   color: #856404;
 }
 
-.status.postponed {
+.status.Pending {
   background: #e2e3e5;
   color: #6c757d;
 }
@@ -350,3 +359,31 @@ th, td {
       flex-direction: column;
       color: #888;
     }
+    .modal-content {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 20px;
+  width: 700px; /* زودنا العرض */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slideUp 0.4s ease;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1 1 48%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  flex: 1 1 100%;
+}
+

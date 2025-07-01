@@ -1,8 +1,7 @@
 
   <div class="topbar">
     <div class="welcome">
-      <h4>Welcome back, sandra</h4>
-      <small>Apr 10, 2025</small>
+      <h4>Welcome back, {{user.UserName}}</h4>
     </div>
 
     <div class="search">
@@ -16,7 +15,7 @@
       <i class="fas fa-bell bell-icon"></i>
 
       <div class="user">
-        <a routerLink="/profile"> <img src="/image/sandra.jpeg" alt="userphoto"></a>
+        <a routerLink="/profile"> <img [src]="user.UploadedFile" alt="userphoto"></a>
        
       </div>
 
@@ -25,44 +24,71 @@
       </button>
     </div>
   </div>
- <!-- Modal Form -->
-  <div class="modal" id="taskModal" *ngIf="isOpen">
-    <form class="modal-content">
-      <span class="close-btn" id="closeModal" (click)="closeModal()">&times;</span>
-      <h2>Add New Task</h2>
-  
+<!-- Modal Form -->
+<div class="modal" id="taskModal" *ngIf="isOpen">
+  <form class="modal-content">
+    <span class="close-btn" id="closeModal" (click)="closeModal()">&times;</span>
+    <h2>Add New Task</h2>
 
-      <label for="taskName"><i class="fas fa-tasks label-icon"></i> Task Name</label>
-<input id="taskName" type="text" placeholder="Enter task name" [(ngModel)]="taskName" name="taskName" required>
+    <div class="row">
+      <div class="form-group">
+        <label for="taskName"><i class="fas fa-tasks label-icon"></i> Task Name</label>
+        <input id="taskName" type="text" placeholder="Enter task name" [(ngModel)]="taskName" name="taskName">
+      </div>
 
-<label for="startDate"><i class="fas fa-play label-icon"></i> Start Date</label>
-<input id="startDate" type="date" [(ngModel)]="startDate" name="startDate" required>
+      <div class="form-group">
+        <label for="startDate"><i class="fas fa-play label-icon"></i> Start Date</label>
+        <input id="startDate" type="date" [(ngModel)]="startDate" name="startDate">
+      </div>
+    </div>
 
-<label for="deadline"><i class="fas fa-hourglass-end label-icon"></i> Deadline</label>
-<input id="deadline" type="date" [(ngModel)]="deadline" name="deadline" required>
+    <div class="row">
+      <div class="form-group">
+        <label for="deadline"><i class="fas fa-hourglass-end label-icon"></i> Deadline</label>
+        <input id="deadline" type="date" [(ngModel)]="deadline" name="deadline">
+      </div>
 
-<label for="description"><i class="fas fa-align-left label-icon"></i> Description</label>
-<textarea id="description" placeholder="Enter task description" [(ngModel)]="description" name="description" required></textarea>
+      <div class="form-group">
+        <label for="status"><i class="fas fa-tasks label-icon"></i> Status</label>
+        <select id="status" [(ngModel)]="status" name="status">
+          <option value="Completed">Completed</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+        </select>
+      </div>
+    </div>
 
-<label for="fileUpload"><i class="fas fa-paperclip label-icon"></i> Attach File</label>
-<input id="fileUpload" type="file" (change)="onFileChange($event)">
+    <div class="row">
+      <div class="form-group">
+        <label for="category"><i class="fas fa-list label-icon"></i> Category</label>
+        <select id="category" [(ngModel)]="category" name="category">
+          <option value="">Select Category</option>
+          <option value="Management">Management</option>
+          <option value="Development">Development</option>
+          <option value="Design">Design</option>
+          <option value="Audit">Audit</option>
+        </select>
+      </div>
 
-<label for="category"><i class="fas fa-list label-icon"></i> Category</label>
-<select id="category" [(ngModel)]="category" name="category" required>
-  <option value="">Select Category</option>
-  <option value="Management">Management</option>
-  <option value="Development">Development</option>
-  <option value="Design">Design</option>
-  <option value="Audit">Audit</option>
-</select>
+      <div class="form-group">
+        <label for="fileUpload"><i class="fas fa-paperclip label-icon"></i> Attach File</label>
+        <input id="fileUpload" type="file" (change)="onFileChange($event)">
+      </div>
+    </div>
 
-<!-- زر الحفظ -->
-<button (click)="submitTask()" class="add-task-btn">Save Task</button>
+    <div class="row">
+      <div class="form-group full-width">
+        <label for="description"><i class="fas fa-align-left label-icon"></i> Description</label>
+        <textarea id="description" placeholder="Enter task description" [(ngModel)]="description"
+          name="description"></textarea>
+      </div>
+    </div>
+
+    <button (click)="submitTask()" class="add-task-btn">Save Task</button>
+  </form>
+</div>
 
 
-    </form>
-  </div>
-
-   <div class="container" id="taskContainer">
-    <!-- Tasks will appear here -->
-  </div>
+<div class="container" id="taskContainer">
+  <!-- Tasks will appear here -->
+</div>

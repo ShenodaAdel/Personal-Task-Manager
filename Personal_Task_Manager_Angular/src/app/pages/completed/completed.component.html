@@ -1,130 +1,47 @@
 <div class="container">
-    <!-- Example Column -->
-    <div class="column">
-      <h2><i class="fas fa-check-circle status-normal"></i>Completed</h2>
-      <input type="text" class="search-box" placeholder="Search Completed Tasks...">
-      <div class="task">
-        <div class="title"><i class="fas fa-tasks"></i> Project Management</div>
-       <div class="meta">
-        <span class="meta-item type"><i class="fas fa-layer-group"></i> Type: Design</span>
-        <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: 25 Sep</span>
-      </div>
-        <div class="description">Organizing and tracking overall project tasks and deliverables.</div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 75%; background-color: #17a2b8;"></div>
-        </div>
-        <div class="task-buttons">
-          <button class="btn-view"><i class="fas fa-eye"></i> View</button>
-          <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
-          <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
-        </div>
-      </div>
-      <div class="task">
-        <div class="title"><i class="fas fa-tasks"></i> Project Management</div>
-       <div class="meta">
-        <span class="meta-item type"><i class="fas fa-layer-group"></i> Type: Design</span>
-        <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: 25 Sep</span>
-      </div>
-        <div class="description">Organizing and tracking overall project tasks and deliverables.</div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 75%; background-color: #17a2b8;"></div>
-        </div>
-        <div class="task-buttons">
-          <button class="btn-view"><i class="fas fa-eye"></i> View</button>
-          <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
-          <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
-        </div>
-      </div>
-      <div class="task">
-        <div class="title"><i class="fas fa-tasks"></i> Project Management</div>
-       <div class="meta">
-        <span class="meta-item type"><i class="fas fa-layer-group"></i> Type: Design</span>
-        <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: 25 Sep</span>
-      </div>
-        <div class="description">Organizing and tracking overall project tasks and deliverables.</div>
-        <div class="progress">
-          <div class="progress-bar" style="width: 100%; background-color: #17a2b8;"></div>
-        </div>
-        <div class="task-buttons">
-          <button class="btn-view"><i class="fas fa-eye"></i> View</button>
-          <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
-          <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
-        </div>
-      </div>
+  <!-- Example Column -->
+  <div class="column">
+    <h2><i class="fas fa-check-circle status-normal"></i>Completed</h2>
+
+    @for(task of taskCompleted ;track $index){
+    <div class="task">
+      <div class="title"><i class="fas fa-tasks"></i> {{task.TaskName}}</div>
+      <div class="meta">
+        <span class="meta-item type"><i class="fas fa-layer-group"></i> Category:{{task.Category}}</span>
      
-      <div class="task">
-  <div class="title"><i class="fas fa-paint-brush"></i> UI Design Review</div>
 
-  <div class="meta">
-  <span class="meta-item type"><i class="fas fa-layer-group"></i> Type: Design</span>
-  <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: 25 Sep</span>
-</div>
+          <span class="meta-item type">
+            <i class="fas fa-calendar-alt"></i>
+            Start: {{task.StartDate | date}}
+          </span>
+           <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: {{task.Deadline | date}}</span>
+        </div>
 
+       
+    
+      <div class="description">{{task.Description}}</div>
+      <div class="progress">
+        <div class="progress-bar" style="width: 75%; background-color: #17a2b8;"></div>
+      </div>
+ 
 
-  <div class="description">
-    Check alignment and aesthetics across all pages.
-  </div>
-
-  <div class="progress">
-    <div class="progress-bar" style="width: 100%; background-color: #ffc107;"></div>
-  </div>
-
-  <div class="task-buttons">
-    <button class="btn-view"><i class="fas fa-eye"></i> View</button>
-    <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
-    <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
-  </div>
-</div>
-
-    <div class="task">
-  <div class="title"><i class="fas fa-paint-brush"></i> UI Design Review</div>
-
-  <div class="meta">
-  <span class="meta-item type"><i class="fas fa-layer-group"></i> Type: Design</span>
-  <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: 25 Sep</span>
-</div>
-
-
-  <div class="description">
-    Check alignment and aesthetics across all pages.
-  </div>
-
-  <div class="progress">
-    <div class="progress-bar" style="width: 100%; background-color: #ffc107;"></div>
-  </div>
-
-  <div class="task-buttons">
-    <button class="btn-view"><i class="fas fa-eye"></i> View</button>
-    <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
-    <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
-  </div>
-</div>
-
-    <div class="task">
-  <div class="title"><i class="fas fa-paint-brush"></i> UI Design Review</div>
-
-  <div class="meta">
-  <span class="meta-item type"><i class="fas fa-layer-group"></i> Type: Design</span>
-  <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: 25 Sep</span>
-</div>
-
-
-  <div class="description">
-    Check alignment and aesthetics across all pages.
-  </div>
-
-  <div class="progress">
-    <div class="progress-bar" style="width: 100%; background-color: #ffc107;"></div>
-  </div>
-
-  <div class="task-buttons">
-    <button class="btn-view"><i class="fas fa-eye"></i> View</button>
-    <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
-    <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
-  </div>
-</div>
-
-
+      <div class="task-buttons">
+              <button class="btn-view" routerLink="/detail-task/{{$index}}" title="View">
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="btn-edit" routerLink="/update-task/{{$index}}" title="Edit">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="btn-delete" (click)="deleteTask($index)" title="Delete">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
     </div>
+    }
+
+
+
 
   </div>
+
+</div>

@@ -1,32 +1,35 @@
 <div class="task-detail-card">
   <!-- اسم المهمة -->
-  <h2 class="task-title"><i class="fas fa-tasks"></i> Social Media Campaign</h2>
+  <h2 class="task-title"><i class="fas fa-tasks"></i> {{task.TaskName}} :</h2>
+  <p class="task-description">{{task.Description}}</p>
 
   <!-- الوصف -->
-  <div class="description-block">
+  <div class="img-block">
     <i class="fas fa-align-left label-icon"></i>
     <img [src]="task.AttachedFile" alt="Task Image">
   </div>
 
   <!-- باقي البيانات 2 عمود -->
   <div class="info-grid">
+  
      <div class="info-item">
       <i class="fas fa-folder-open label-icon"></i>
-      <strong>Category:</strong> {{task.TaskName}}
+      <strong>Category:</strong> {{task.Category}}
     </div>
-     <div class="info-item">
-      <i class="fas fa-folder-open label-icon"></i>
-      <strong>Category:</strong> {{task.Description}}
+    <div class="info-item">
+      <i class="fas fa-check-circle label-icon"></i>
+      <strong>Status:</strong> 
+      <span class="status">{{task.Status}}</span>
+
     </div>
-   
-     <div class="info-item">
+    <div class="info-item">
       <i class="fas fa-clock label-icon"></i>
-      <strong>Time:</strong> {{task.StartDate}}
+      <strong>Start Date:</strong> {{task.StartDate | date}}
     </div>
  
     <div class="info-item">
       <i class="fas fa-calendar-alt label-icon"></i>
-      <strong>Due Date:</strong> {{task.Deadline}}
+      <strong>Deadline:</strong> {{task.Deadline | date}}
     </div>
    
 
@@ -39,7 +42,7 @@
       <i class="fas fa-trash"></i> Delete Task
     </button>
 
-    <button class="edit-profile-btn" routerLink="/update-task">
+    <button class="edit-profile-btn" [routerLink]="['/update-task', id]">
       <i class="fas fa-pen"></i> Edit Task
     </button>
   </div>

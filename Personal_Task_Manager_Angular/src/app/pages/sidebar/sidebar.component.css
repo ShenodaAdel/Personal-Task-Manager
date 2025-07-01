@@ -29,7 +29,7 @@
 }
 
 
-.navigation ul li {
+.navigation ul li  {
   position: relative;
   width: 100%;
   list-style: none;
@@ -40,7 +40,7 @@
 
 
 
-.navigation ul li a {
+.navigation ul li a  {
   position: relative;
   display: block;
   width: 100%;
@@ -50,7 +50,7 @@
 }
 
 
-.navigation ul li a .icon {
+.navigation ul li a .icon  {
   position: relative;
   display: block;
   min-width: 60px;
@@ -136,3 +136,33 @@
   box-shadow: 35px -35px 0 10px #fff;
 }
 
+.navigation ul li button.logout-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navigation ul li button.logout-btn .icon {
+  min-width: 60px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+}
+
+.navigation ul li button.logout-btn .icon i {
+  font-size: 1.75rem;
+}
+
+.navigation ul li button.logout-btn .title {
+  padding: 0 30px;
+  font-size: 1.2rem;
+  height: 75px;
+  line-height: 60px;
+  white-space: nowrap;
+  text-align: start;
+}

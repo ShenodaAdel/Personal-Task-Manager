@@ -1,16 +1,18 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ITask } from '../../interface/itasks';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ITask } from '../../core/interface/itasks';
 import { ToastrService } from 'ngx-toastr';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-detail-task',
-  imports: [],
+  imports: [DatePipe,RouterLink],
   templateUrl: './detail-task.component.html',
   styleUrl: './detail-task.component.css'
 })
 export class DetailTaskComponent implements OnInit {
 private readonly toastrService=inject(ToastrService);
+private readonly router=inject(Router);
   private readonly activatedRoute=inject(ActivatedRoute);
   AllTasks: ITask[] = [];
   task: ITask = {} as ITask;
@@ -32,6 +34,7 @@ deleteTask(): void {
     this.AllTasks.splice(Number(this.id), 1);
     localStorage.setItem('taskData', JSON.stringify(this.AllTasks));
     console.log('Updated AllTasks after deletion:', this.AllTasks);
-    this.toastrService.success("تم حذف المهمة بنجاح", "نجاح");
+    this.toastrService.success("the task has been deleted successfully", "Success");
+    this.router.navigate(['/tasks']);
   }
 }

@@ -3,6 +3,10 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { ITask } from '../../core/interface/itasks';
+import { IUser } from '../../core/interface/i-user';
+import { UserServiceService } from '../../core/service/userService/user.service';
+import { TaskService } from '../../core/service/Task/task.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,10 +16,22 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class NavbarComponent implements OnInit {
   private readonly toastrService = inject(ToastrService);
+  private readonly userService=inject(UserServiceService);
+  private readonly taskService=inject(TaskService);
   isOpen: boolean = false;
-  tasks: any[] = [];
+  tasks: ITask[] = [];
+  user: IUser ={} as IUser;
   ngOnInit(): void {
     this.tasks = JSON.parse(localStorage.getItem('taskData') || '[]');
+   this.userService.user$.subscribe((data) => {
+    if (data) {
+      this.user = data;
+    } else {
+      this.user = JSON.parse(localStorage.getItem('User') || '{}');
+    }
+  });
+
+
   }
   openModal(): void {
     this.isOpen = true;
@@ -29,6 +45,8 @@ export class NavbarComponent implements OnInit {
   description: string = '';
   category: string = '';
   attachedFile!: File;
+  status:string='';
+  
   filePreviewUrl: string = ''; // لو حابة تعرضي اسم الملف أو تفاصيله
 
   onFileChange(e: Event): void {
@@ -40,11 +58,8 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  submitTask(): void {
-
-
+ submitTask(): void {
     const file = this.attachedFile;
-
     if (file) {
       const reader = new FileReader();
       reader.readAsDataURL(file);
@@ -57,6 +72,7 @@ export class NavbarComponent implements OnInit {
         formData.append('Deadline', this.deadline);
         formData.append('Description', this.description);
         formData.append('Category', this.category);
+        formData.append('Status', this.status);
         formData.append('AttachedFile', base64File);
         console.log('Task FormData:', formData);
         const taskObject: any = {};
@@ -66,6 +82,7 @@ export class NavbarComponent implements OnInit {
         console.log('Task Object:', taskObject);
         this.tasks.push(taskObject);
         localStorage.setItem('taskData', JSON.stringify(this.tasks));
+        this.taskService.upadateTask(this.tasks);
         this.toastrService.success("تمت إضافة المهمة بنجاح", "نجاح");
         this.closeModal();
         this.taskName = '';
@@ -73,6 +90,7 @@ export class NavbarComponent implements OnInit {
         this.deadline = '';
         this.description = '';
         this.category = '';
+        this.status = '';
  
 
       };

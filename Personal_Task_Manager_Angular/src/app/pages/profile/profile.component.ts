@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { IUser } from '../../core/interface/i-user';
 
 @Component({
   selector: 'app-profile',
@@ -7,6 +8,17 @@ import { RouterLink } from '@angular/router';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
+
+  User: IUser = {}  as IUser;
+
+
+  ngOnInit(): void {
+    const userData = localStorage.getItem('User');
+    if (userData) {
+      this.User = JSON.parse(userData);
+     
+    }
+  }
 
 }

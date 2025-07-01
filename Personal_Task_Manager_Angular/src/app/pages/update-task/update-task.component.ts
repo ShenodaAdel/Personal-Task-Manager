@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ITask } from '../../interface/itasks';
-
+import { ITask } from '../../core/interface/itasks';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-update-task',
   imports: [FormsModule],
@@ -11,20 +11,25 @@ import { ITask } from '../../interface/itasks';
   styleUrl: './update-task.component.css'
 })
 export class UpdateTaskComponent {
-private readonly toastrService=inject(ToastrService);
-  private readonly activatedRoute=inject(ActivatedRoute);
-isUpdateOpen = false;
-taskName: string = '';
-startDate: string = '';
-deadline: string = '';
-description: string = '';
-category: string = '';
-status: string = 'Pending';
-attachedFile!: File;
-filePreviewUrl: string = '';
+  private readonly toastrService = inject(ToastrService);
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+  isUpdateOpen = false;
+  taskName: string = '';
+  startDate: string = '';
+  deadline: string = '';
+  description: string = '';
+  category: string = '';
+  status: string = '';
+  attachedFile!: File;
+  filePreviewUrl: string = '';
 
-AllTasks: ITask[] = [];
-id!: string | null;
+  AllTasks: ITask[] = [];
+  id!: string | null;
+
+
+
+
 onFileChange(e: Event): void {
   const input = e.target as HTMLInputElement;
   if (input.files && input.files.length > 0) {
@@ -35,41 +40,62 @@ onFileChange(e: Event): void {
 }
 
 submitTask(): void {
-  const formData = new FormData();
-  formData.append('TaskName', this.taskName);
-  formData.append('StartDate', this.startDate);
-  formData.append('Deadline', this.deadline);
-  formData.append('Description', this.description);
-  formData.append('Category', this.category);
-  formData.append('Status', this.status);
-  formData.append('AttachedFile', this.attachedFile);
+  const taskObject: any = {
+    TaskName: this.taskName,
+    StartDate: this.startDate,
+    Deadline: this.deadline,
+    Description: this.description,
+    Category: this.category,
+    Status: this.status,
+    AttachedFile: '' 
+  };
 
-  console.log('Task FormData:', formData);
-  const taskObject: any = {};
-        formData.forEach((value, key) => {
-          taskObject[key] = value;
-        });
-        console.log('Task Object:', taskObject);
-        this.AllTasks[Number(this.id)] = taskObject;
-        localStorage.setItem('taskData', JSON.stringify(this.AllTasks));
-        this.toastrService.success("تمت تعديل المهمة بنجاح", "نجاح");
-        formData.delete;
+  if (this.attachedFile) {
+    const reader = new FileReader();
+    reader.readAsDataURL(this.attachedFile);
+    reader.onload = () => {
+      taskObject.AttachedFile = reader.result as string;
+      this.updateTask(taskObject);
+    };
+    reader.onerror = (error) => {
+      console.error('Error reading file:', error);
+      this.toastrService.error('Failed to upload file', 'Error');
+    };
+  } else {
+    taskObject.AttachedFile = this.AllTasks[Number(this.id)]?.AttachedFile || '';
+    this.updateTask(taskObject);
+  }
 }
 
-  ngOnInit(): void {
-  this.AllTasks=JSON.parse(localStorage.getItem('taskData') || '[]');
+updateTask(taskObject: any): void {
+  if (this.id !== null) {
+    this.AllTasks[Number(this.id)] = taskObject;
+    localStorage.setItem('taskData', JSON.stringify(this.AllTasks));
+    this.toastrService.success("Task updated successfully", "Success");
+    this.router.navigate(['/tasks']);
+  } else {
+    this.toastrService.error("Invalid task ID", "Error");
+  }
+}
+
+ngOnInit(): void {
+  this.AllTasks = JSON.parse(localStorage.getItem('taskData') || '[]');
   this.activatedRoute.paramMap.subscribe({
-    next:(res)=>{
-       this.id = res.get("id");
+    next: (res) => {
+      this.id = res.get("id");
       const task = this.AllTasks[Number(this.id)];
-      this.taskName = task.TaskName;
-      this.startDate = task.StartDate;  
-      this.deadline = task.Deadline;
-      this.description = task.Description;
-      this.category = task.Category;
+      if (task) {
+        this.taskName = task.TaskName;
+        this.startDate = task.StartDate;
+        this.deadline = task.Deadline;
+        this.status = task.Status;
+        this.description = task.Description;
+        this.category = task.Category;
+        this.filePreviewUrl = task.AttachedFile || '';
+      }
     }
   });
-
 }
 
-}
+
+  }

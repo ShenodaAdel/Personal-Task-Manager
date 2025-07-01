@@ -1,7 +1,7 @@
 <div class="cardBox">
   <div class="card">
     <div>
-      <div class="numbers">5</div>
+      <div class="numbers">{{Ncompleted}}</div>
       <div class="cardName">Completed Tasks</div>
     </div>
     <div class="iconBx completed">
@@ -11,7 +11,7 @@
 
   <div class="card">
     <div>
-      <div class="numbers">3</div>
+      <div class="numbers">{{NinProgress}}</div>
       <div class="cardName">In Progress</div>
     </div>
     <div class="iconBx progress">
@@ -21,8 +21,8 @@
 
   <div class="card">
     <div>
-      <div class="numbers">2</div>
-      <div class="cardName">Postponed</div>
+      <div class="numbers">{{Npending}}</div>
+      <div class="cardName">Pending</div>
     </div>
     <div class="iconBx postponed">
       <i class="fas fa-clock"></i>
@@ -54,6 +54,7 @@
           <th>Start Date</th>
           <th>Deadline</th>
           <th>Category</th>
+          <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -63,25 +64,36 @@
           <td><img [src]="task.AttachedFile" alt="" width="50" height="50"></td>
           <td>{{task.TaskName}}</td>
           <td>{{task.Description}}</td>
-          <td>{{task.StartDate}}</td>
-          <td>{{task.Deadline}}</td>
-
-
+          <td>{{task.StartDate | date}}</td>
+          <td>{{task.Deadline | date}}</td>
           <td>{{task.Category}}</td>
-        
+          @if(task.Status === 'Completed') {
+          <td class="status-cell">
+            <span class="status complete">{{task.Status}}</span>
+          </td>
+          } @else if(task.Status === 'In Progress') {
+             <td class="status-cell">
+               <span class="status progress">{{task.Status}}</span>
+             </td>
+          } @else if(task.Status === 'Pending') {
+          <td class="status-cell">
+            <span class="status Pending">{{task.Status}}</span>
+          </td>
+        }
+
           <td class="actions">
             <div class="action-buttons">
               <button class="action-btn view" routerLink="/detail-task/{{$index}}" title="View">
-              <i class="fas fa-eye"></i>
-            </button>
-            <button class="action-btn edit" routerLink="/update-task/{{$index}}" title="Edit">
-              <i class="fas fa-edit"></i>
-            </button>
-            <button class="action-btn delete" (click)="deleteTask($index)" title="Delete">
-              <i class="fas fa-trash-alt"></i>
-            </button>
+                <i class="fas fa-eye"></i>
+              </button>
+              <button class="action-btn edit" routerLink="/update-task/{{$index}}" title="Edit">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button class="action-btn delete" (click)="deleteTask($index)" title="Delete">
+                <i class="fas fa-trash-alt"></i>
+              </button>
             </div>
-            
+
           </td>
 
         </tr>
@@ -100,36 +112,7 @@
     </div>
   </div>
 
-  <div class="task-panel">
-    <h4>Upcoming Tasks <span class="badge">3</span></h4>
-
-    <div class="task-item">
-      <div class="task-header">
-        <h5>Submit Assignment</h5>
-        <p><strong>Due: Jun 30</strong></p>
-      </div>
-      <p>Finish and upload the final report to the system.</p>
-      <small>2 days left</small>
-    </div>
-
-    <div class="task-item">
-      <div class="task-header">
-        <h5>Team Meeting</h5>
-        <p><strong>Due: Jul 1</strong></p>
-      </div>
-      <p>Discuss Q3 planning with the marketing team.</p>
-      <small>3 days left</small>
-    </div>
-
-    <div class="task-item">
-      <div class="task-header">
-        <h5>Renew Gym Subscription</h5>
-        <p><strong>Due: Jul 2</strong></p>
-      </div>
-      <p>Make the payment before the deadline.</p>
-      <small>4 days left</small>
-    </div>
-  </div>
+ 
 
 </div>
 
@@ -139,36 +122,64 @@
     <span class="close-btn" id="closeModal" (click)="closeModal()">&times;</span>
     <h2>Add New Task</h2>
 
-    <label for="taskName"><i class="fas fa-tasks label-icon"></i> Task Name</label>
-    <input id="taskName" type="text" placeholder="Enter task name" [(ngModel)]="taskName" name="taskName">
+    <div class="row">
+      <div class="form-group">
+        <label for="taskName"><i class="fas fa-tasks label-icon"></i> Task Name</label>
+        <input id="taskName" type="text" placeholder="Enter task name" [(ngModel)]="taskName" name="taskName">
+      </div>
 
-    <label for="startDate"><i class="fas fa-play label-icon"></i> Start Date</label>
-    <input id="startDate" type="date" [(ngModel)]="startDate" name="startDate">
+      <div class="form-group">
+        <label for="startDate"><i class="fas fa-play label-icon"></i> Start Date</label>
+        <input id="startDate" type="date" [(ngModel)]="startDate" name="startDate">
+      </div>
+    </div>
 
-    <label for="deadline"><i class="fas fa-hourglass-end label-icon"></i> Deadline</label>
-    <input id="deadline" type="date" [(ngModel)]="deadline" name="deadline">
+    <div class="row">
+      <div class="form-group">
+        <label for="deadline"><i class="fas fa-hourglass-end label-icon"></i> Deadline</label>
+        <input id="deadline" type="date" [(ngModel)]="deadline" name="deadline">
+      </div>
 
-    <label for="description"><i class="fas fa-align-left label-icon"></i> Description</label>
-    <textarea id="description" placeholder="Enter task description" [(ngModel)]="description"
-      name="description"></textarea>
+      <div class="form-group">
+        <label for="status"><i class="fas fa-tasks label-icon"></i> Status</label>
+        <select id="status" [(ngModel)]="status" name="status">
+          <option value="Completed">Completed</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+        </select>
+      </div>
+    </div>
 
-    <label for="fileUpload"><i class="fas fa-paperclip label-icon"></i> Attach File</label>
-    <input id="fileUpload" type="file" (change)="onFileChange($event)">
+    <div class="row">
+      <div class="form-group">
+        <label for="category"><i class="fas fa-list label-icon"></i> Category</label>
+        <select id="category" [(ngModel)]="category" name="category">
+          <option value="">Select Category</option>
+          <option value="Management">Management</option>
+          <option value="Development">Development</option>
+          <option value="Design">Design</option>
+          <option value="Audit">Audit</option>
+        </select>
+      </div>
 
-    <label for="category"><i class="fas fa-list label-icon"></i> Category</label>
-    <select id="category" [(ngModel)]="category" name="category">
-      <option value="">Select Category</option>
-      <option value="Management">Management</option>
-      <option value="Development">Development</option>
-      <option value="Design">Design</option>
-      <option value="Audit">Audit</option>
-    </select>
+      <div class="form-group">
+        <label for="fileUpload"><i class="fas fa-paperclip label-icon"></i> Attach File</label>
+        <input id="fileUpload" type="file" (change)="onFileChange($event)">
+      </div>
+    </div>
 
-    <!-- زر الحفظ -->
+    <div class="row">
+      <div class="form-group full-width">
+        <label for="description"><i class="fas fa-align-left label-icon"></i> Description</label>
+        <textarea id="description" placeholder="Enter task description" [(ngModel)]="description"
+          name="description"></textarea>
+      </div>
+    </div>
+
     <button (click)="submitTask()" class="add-task-btn">Save Task</button>
-
   </form>
 </div>
+
 
 <div class="container" id="taskContainer">
   <!-- Tasks will appear here -->

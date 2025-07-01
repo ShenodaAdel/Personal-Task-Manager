@@ -4,12 +4,12 @@
   <div class="form-row">
     <div class="form-group half">
       <label for="taskName"><i class="fas fa-tasks label-icon"></i>Task Name</label>
-      <input id="taskName" type="text" name="name" [(ngModel)]="taskName" required />
+      <input id="taskName" type="text" name="name" [(ngModel)]="taskName"  />
     </div>
 
     <div class="form-group half">
       <label for="category"><i class="fas fa-list label-icon"></i>Category</label>
-      <select id="category" name="category" [(ngModel)]="category" required>
+      <select id="category" name="category" [(ngModel)]="category" >
         <option value="">Select Category</option>
         <option value="Management">Management</option>
         <option value="Development">Development</option>
@@ -22,17 +22,17 @@
   <div class="form-row">
     <div class="form-group half">
       <label for="startDate"><i class="fas fa-play label-icon"></i>Start Date</label>
-      <input id="startDate" type="date" name="startDate" [(ngModel)]="startDate" required />
+      <input id="startDate" type="date" name="startDate" [(ngModel)]="startDate"  />
     </div>
 
     <div class="form-group half">
       <label for="deadline"><i class="fas fa-hourglass-end label-icon"></i>Deadline</label>
-      <input id="deadline" type="date" name="deadline" [(ngModel)]="deadline" required />
+      <input id="deadline" type="date" name="deadline" [(ngModel)]="deadline"  />
     </div>
   </div>
 
   <label for="description"><i class="fas fa-align-left label-icon"></i>Description</label>
-  <textarea id="description" name="description" [(ngModel)]="description" required></textarea>
+  <textarea id="description" name="description" [(ngModel)]="description" ></textarea>
 
   <div class="form-row">
     <div class="form-group half">
