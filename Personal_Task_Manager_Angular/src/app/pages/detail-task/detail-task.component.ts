@@ -1,8 +1,8 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ITask } from '../../core/interface/itasks';
 import { ToastrService } from 'ngx-toastr';
-import { DatePipe } from '@angular/common';
+import { DatePipe, isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-detail-task',
@@ -14,11 +14,15 @@ export class DetailTaskComponent implements OnInit {
 private readonly toastrService=inject(ToastrService);
 private readonly router=inject(Router);
   private readonly activatedRoute=inject(ActivatedRoute);
+     private readonly platformId=inject(PLATFORM_ID);
   AllTasks: ITask[] = [];
   task: ITask = {} as ITask;
   id!: string | null;
   ngOnInit(): void {
-  this.AllTasks=JSON.parse(localStorage.getItem('taskData') || '[]');
+    if (isPlatformBrowser(this.platformId)) {
+          this.AllTasks=JSON.parse(localStorage.getItem('taskData') || '[]');
+    }
+
   this.activatedRoute.paramMap.subscribe({
     next:(res)=>{
        this.id = res.get("id");

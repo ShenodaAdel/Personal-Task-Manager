@@ -1,8 +1,8 @@
-import { Component, inject, OnChanges, OnInit, Pipe } from '@angular/core';
+import { Component, inject, OnChanges, OnInit, Pipe, PLATFORM_ID } from '@angular/core';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { NavbarComponent } from "../navbar/navbar.component";
 
-import { DatePipe, NgIf } from '@angular/common';
+import { DatePipe, isPlatformBrowser, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { RouterLink } from '@angular/router';
@@ -14,13 +14,14 @@ import { TaskService } from '../../core/service/Task/task.service';
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [SidebarComponent, NavbarComponent, NgIf, FormsModule, RouterLink, DatePipe],
+  imports: [ NgIf, FormsModule, RouterLink, DatePipe],
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
   private readonly toastrService = inject(ToastrService);
   private readonly taskService = inject(TaskService);
+     private readonly platformId=inject(PLATFORM_ID);
   isOpen: boolean = false;
   tasks: ITask[] = [];
     taskName: string = '';
@@ -115,7 +116,9 @@ export class TasksComponent implements OnInit {
   }
 }
   ngOnInit(): void {
-    this.tasks = JSON.parse(localStorage.getItem('taskData') || '[]');
+   if (isPlatformBrowser(this.platformId)) {
+         this.tasks = JSON.parse(localStorage.getItem('taskData') || '[]');
+    
     console.log('Tasks from localStorage:', this.tasks);
     this.updateCounters();
     this.taskService.task$.subscribe((data) => {
@@ -127,6 +130,7 @@ export class TasksComponent implements OnInit {
         localStorage.setItem('taskData', JSON.stringify(this.tasks));
       }
     });
+  }
 
   }
 

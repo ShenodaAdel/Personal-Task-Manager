@@ -29,6 +29,7 @@ export class LoginComponent {
       if (!filteredUserInfo) {
         this.toastrService.error('Invalid email or password');
       } else {
+        localStorage.setItem('UserLogin', JSON.stringify(filteredUserInfo));
         this.toastrService.success('Login successful!');
 
         this.login.reset();

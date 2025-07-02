@@ -54,8 +54,8 @@ export class SettingComponent implements OnInit {
         console.log('Base64 File:', base64File);
 
         const formData = new FormData();
-        formData.append('UserName', this.userName);
-        formData.append('Email', this.email);
+        formData.append('userName', this.userName);
+        formData.append('email', this.email);
         formData.append('PhoneNumber', this.phoneNumber);
         formData.append('Address', this.address);
         formData.append('UploadedFile', base64File);
@@ -63,14 +63,14 @@ export class SettingComponent implements OnInit {
         console.log('FormData Sent:', formData);
 
         this.User = {
-          UserName: this.userName,
-          Email: this.email,
+          userName: this.userName,
+          email: this.email,
           PhoneNumber: this.phoneNumber,
           Address: this.address,
           UploadedFile: base64File
         };
 
-        localStorage.setItem('User', JSON.stringify(this.User));
+        localStorage.setItem('UserLogin', JSON.stringify(this.User));
         this.userService.updateUser(this.User);
 
 
@@ -85,14 +85,14 @@ export class SettingComponent implements OnInit {
     } else {
       // حالة مفيش فايل
       this.User = {
-        UserName: this.userName,
-        Email: this.email,
+        userName: this.userName,
+        email: this.email,
         PhoneNumber: this.phoneNumber,
         Address: this.address,
         UploadedFile: this.imagePreview // الصورة القديمة أو فاضية
       };
 
-      localStorage.setItem('User', JSON.stringify(this.User));
+      localStorage.setItem('UserLogin', JSON.stringify(this.User));
       this.toastrService.success('Profile updated successfully ', 'Success');
       this.router.navigate(['/profile']);
     }
@@ -100,12 +100,12 @@ export class SettingComponent implements OnInit {
 
 
   ngOnInit(): void {
-    const storedUser = localStorage.getItem('User');
+    const storedUser = localStorage.getItem('UserLogin');
     console.log('Stored User Data:', storedUser);
     if (storedUser) {
       this.User = JSON.parse(storedUser);
-      this.userName = this.User.UserName || '';
-      this.email = this.User.Email || '';
+      this.userName = this.User.userName || '';
+      this.email = this.User.email || '';
       this.phoneNumber = this.User.PhoneNumber || '';
       this.address = this.User.Address || '';
       this.imagePreview = this.User.UploadedFile || '';

@@ -44,7 +44,7 @@ export class RegisterComponent  implements OnInit {
         this.toastrService.success('Registration successful!');
 
       this.formGroup.reset();
-      setTimeout(() => this.router.navigate(['/tasks']), 1000);
+      setTimeout(() => this.router.navigate(['/login']), 1000);
 
       }
     } else {

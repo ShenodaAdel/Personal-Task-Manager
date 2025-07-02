@@ -107,8 +107,13 @@
 /* label style (Menu) */
 .navigation ul li.label {
   pointer-events: none;
-  margin-bottom: 30px;
+  margin: 30px;
   opacity: 0.5;
+  i {
+    margin-top: 15px;
+  font-size: 2vw; 
+  }
+
 }
 .navigation {
   background: #007bff;

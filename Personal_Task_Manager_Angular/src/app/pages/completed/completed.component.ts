@@ -1,6 +1,6 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ITask } from '../../core/interface/itasks';
-import { DatePipe } from '@angular/common';
+import { DatePipe, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -11,28 +11,32 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './completed.component.css'
 })
 export class CompletedComponent  implements OnInit{
-  private readonly toastrService=inject(ToastrService);
-taskCompleted:ITask[]=[];
-allTask:ITask[]=[];
+private readonly toastrService=inject(ToastrService);
+   private readonly platformId=inject(PLATFORM_ID);
+taskCompleted: { task: ITask; index: number }[] = [];
+allTask:ITask[]=[]; //true index
   deleteTask(index: number): void {
-    console.log('Task deleted at index:', index);
-    this.allTask.splice(index, 1);//0
-    this.taskCompleted.splice(index,1)//1
-    localStorage.setItem('taskData', JSON.stringify(this.allTask));
-    console.log('Updated tasks after deletion:', this.allTask);
-    this.toastrService.success("تم حذف المهمة بنجاح", "نجاح");
-  }
+    console.log(index);
+  const deletedEntry = this.taskCompleted[index];
+  const indexInAll = deletedEntry.index;
+  this.allTask.splice(indexInAll, 1);
+  this.taskCompleted.splice(index, 1);
+  localStorage.setItem('taskData', JSON.stringify(this.allTask));
+  this.toastrService.success("تم حذف المهمة بنجاح", "نجاح");
+
+}
 
   ngOnInit():void{
-    this.allTask =  JSON.parse(localStorage.getItem('taskData') || '[]');
-    for (let task of this.allTask) {
-      if (task.Status === 'Completed') {
-        this.taskCompleted.push(task); //index 
+    if (isPlatformBrowser(this.platformId)) {
+         this.allTask = JSON.parse(localStorage.getItem('taskData') || '[]');
+    }
+    console.log(this.allTask);
+    for (let i=0 ; i< this.allTask.length ;i++ ) {
+      if (this.allTask[i].Status === 'Completed') {
+        this.taskCompleted.push({ task: this.allTask[i], index: i });
       }
     }
-   
-
-
+   console.log(this.taskCompleted);
   }
 
 }
