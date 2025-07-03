@@ -1,52 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\infrastructure\\migrations\\20250703105307_addtwotabletaskandtaskfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20250703105307_addtwotabletaskandtaskfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1D681DD-B6B1-4AF5-93FB-EC818C4F6F78}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\domain\\taskfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1D681DD-B6B1-4AF5-93FB-EC818C4F6F78}|Domain\\Domain.csproj|solutionrelative:domain\\taskfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1D681DD-B6B1-4AF5-93FB-EC818C4F6F78}|Domain\\Domain.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\domain\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1D681DD-B6B1-4AF5-93FB-EC818C4F6F78}|Domain\\Domain.csproj|solutionrelative:domain\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\personal task manager\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|solutionrelative:personal task manager\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\personal task manager\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|solutionrelative:personal task manager\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\infrastructure\\migrations\\20250702125204_createstructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20250702125204_createstructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\personal task manager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|solutionrelative:personal task manager\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\personal task manager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE9102E7-4EB1-4BEE-B96B-55DC958773EB}|Personal Task Manager\\Personal Task Manager.csproj|solutionrelative:personal task manager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{41D2F066-0F7E-4EEE-9341-E8E7AB8934D0}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FB1AB33-E513-448D-8118-A02AF6E91FF0}|Business Logic\\Business Logic.csproj|c:\\users\\user\\source\\repos\\personal-task-manager\\personal task manager\\business logic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FB1AB33-E513-448D-8118-A02AF6E91FF0}|Business Logic\\Business Logic.csproj|solutionrelative:business logic\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -54,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 31,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,6 +89,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:148:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
@@ -179,147 +138,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250703105307_AddTwoTableTaskAndTaskFile.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\Migrations\\20250703105307_AddTwoTableTaskAndTaskFile.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250703105307_AddTwoTableTaskAndTaskFile.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\Migrations\\20250703105307_AddTwoTableTaskAndTaskFile.cs",
-              "RelativeToolTip": "Infrastructure\\Migrations\\20250703105307_AddTwoTableTaskAndTaskFile.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T10:53:07.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TaskFile.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Domain\\TaskFile.cs",
-              "RelativeDocumentMoniker": "Domain\\TaskFile.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Domain\\TaskFile.cs",
-              "RelativeToolTip": "Domain\\TaskFile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-03T09:40:02.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20250702125204_CreateStructure.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\Migrations\\20250702125204_CreateStructure.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20250702125204_CreateStructure.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\Migrations\\20250702125204_CreateStructure.cs",
-              "RelativeToolTip": "Infrastructure\\Migrations\\20250702125204_CreateStructure.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T12:52:04.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\Program.cs",
-              "RelativeDocumentMoniker": "Personal Task Manager\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\Program.cs",
-              "RelativeToolTip": "Personal Task Manager\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T12:49:54.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\appsettings.json",
-              "RelativeDocumentMoniker": "Personal Task Manager\\appsettings.json",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\appsettings.json",
-              "RelativeToolTip": "Personal Task Manager\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-29T07:24:34.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Task.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Source\\Repos\\Personal-Task-Manager\\Personal Task Manager\\Domain\\Task.cs",
-              "RelativeDocumentMoniker": "Domain\\Task.cs",
-              "ToolTip": "C:\\Users\\User\\Source\\Repos\\Personal-Task-Manager\\Personal Task Manager\\Domain\\Task.cs",
-              "RelativeToolTip": "Domain\\Task.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-29T07:15:24.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "Personal Task Manager\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "Personal Task Manager\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAQwAYAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T18:43:10.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "Personal Task Manager\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Personal Task Manager\\WeatherForecast.cs",
-              "RelativeToolTip": "Personal Task Manager\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T18:42:47.901Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAswEYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T20:40:37.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Infrastructure.csproj",
-              "DocumentMoniker": "C:\\Users\\User\\Source\\Repos\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\Infrastructure.csproj",
-              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
-              "ToolTip": "C:\\Users\\User\\Source\\Repos\\Personal-Task-Manager\\Personal Task Manager\\Infrastructure\\Infrastructure.csproj",
-              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-29T07:16:33.415Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Business Logic\\Class1.cs",
-              "RelativeDocumentMoniker": "Business Logic\\Class1.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\Personal-Task-Manager\\Personal Task Manager\\Business Logic\\Class1.cs",
-              "RelativeToolTip": "Business Logic\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T20:40:16.152Z"
             }
           ]
         }
