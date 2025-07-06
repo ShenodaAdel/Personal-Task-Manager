@@ -14,17 +14,18 @@ import { TaskService } from '../../core/service/Task/task.service';
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [ NgIf, FormsModule, RouterLink, DatePipe],
+  imports: [NgIf, FormsModule, RouterLink, DatePipe],
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
   private readonly toastrService = inject(ToastrService);
   private readonly taskService = inject(TaskService);
-     private readonly platformId=inject(PLATFORM_ID);
+  private readonly platformId = inject(PLATFORM_ID);
   isOpen: boolean = false;
   tasks: ITask[] = [];
-    taskName: string = '';
+  task: ITask = new ITask();
+  taskName: string = '';
   startDate: string = '';
   deadline: string = '';
   description: string = '';
@@ -101,36 +102,36 @@ export class TasksComponent implements OnInit {
     this.updateCounters();
   }
   updateCounters(): void {
-  this.Ncompleted = 0;
-  this.NinProgress = 0;
-  this.Npending = 0;
+    this.Ncompleted = 0;
+    this.NinProgress = 0;
+    this.Npending = 0;
 
-  for (let task of this.tasks) {
-    if (task.Status === 'Completed') {
-      this.Ncompleted++;
-    } else if (task.Status === 'In Progress') {
-      this.NinProgress++;
-    } else {
-      this.Npending++;
+    for (let task of this.tasks) {
+      if (task.Status === 'Completed') {
+        this.Ncompleted++;
+      } else if (task.Status === 'In Progress') {
+        this.NinProgress++;
+      } else {
+        this.Npending++;
+      }
     }
   }
-}
   ngOnInit(): void {
-   if (isPlatformBrowser(this.platformId)) {
-         this.tasks = JSON.parse(localStorage.getItem('taskData') || '[]');
-    
-    console.log('Tasks from localStorage:', this.tasks);
-    this.updateCounters();
-    this.taskService.task$.subscribe((data) => {
-      if (data) {
-        this.tasks = data;
-        this.updateCounters();
-  
-      } else {
-        localStorage.setItem('taskData', JSON.stringify(this.tasks));
-      }
-    });
-  }
+    if (isPlatformBrowser(this.platformId)) {
+      this.tasks = JSON.parse(localStorage.getItem('taskData') || '[]');
+
+      console.log('Tasks from localStorage:', this.tasks);
+      this.updateCounters();
+      this.taskService.task$.subscribe((data) => {
+        if (data) {
+          this.tasks = data;
+          this.updateCounters();
+
+        } else {
+          localStorage.setItem('taskData', JSON.stringify(this.tasks));
+        }
+      });
+    }
 
   }
 
