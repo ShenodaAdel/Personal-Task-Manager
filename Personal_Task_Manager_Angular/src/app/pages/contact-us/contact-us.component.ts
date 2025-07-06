@@ -15,14 +15,14 @@ export class ContactUsComponent {
 
 
   contactForm: FormGroup = new FormGroup({
-    first_name: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+    user_name: new FormControl(null, [Validators.required, Validators.minLength(3)]),
     email: new FormControl(null, [Validators.required, Validators.email]),
     country_code: new FormControl('+20', [Validators.required]),
     phone: new FormControl(null, [
       Validators.required,
       Validators.pattern('^[0-9]{11}$')
     ]),
-    message: new FormControl(null, [Validators.required, Validators.minLength(10)]),
+    problem: new FormControl(null, [Validators.required, Validators.minLength(10)]),
   });
   allHelp: any[] = [];
 

@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { IUser } from '../../core/interface/i-user';
+import { User } from '../../core/interface/i-user';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -11,16 +11,14 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class ProfileComponent implements OnInit {
    private readonly platformId=inject(PLATFORM_ID);
-  User: IUser = {}  as IUser;
+  user:User=new User();
 
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      
-    
     const userData = localStorage.getItem('UserLogin');
     if (userData) {
-      this.User = JSON.parse(userData);
+      this.user = JSON.parse(userData);
      
     }
   }

@@ -7,29 +7,29 @@
          
   <div class="inputBox">
     <label>
-      Username
+      User Name
       <div class="input-icon-wrapper">
-        <input type="text" placeholder="Enter your username" formControlName="userName" />
+        <input type="text" placeholder="Enter your username" formControlName="user_name" />
         <i class="fa fa-user"></i>
       </div>
     </label>
-    @if (formGroup.get('userName')?.errors && formGroup.get('userName')?.touched) {
-  @if (formGroup.get('userName')?.getError('required')) {
+    @if (formGroup.get('user_name')?.errors && formGroup.get('user_name')?.touched) {
+  @if (formGroup.get('user_name')?.getError('required')) {
     <div class="alert-danger">
       <i class="fas fa-circle-exclamation"></i>
-      Username is required
+      User Name is required
     </div>
   }
-  @else if (formGroup.get('userName')?.getError('minlength')) {
+  @else if (formGroup.get('user_name')?.getError('minlength')) {
     <div class="alert-danger">
       <i class="fas fa-circle-exclamation"></i>
-      Username must be at least 3 characters
+      user_name must be at least 3 characters
     </div>
   }
-  @else if (formGroup.get('userName')?.getError('maxlength')) {
+  @else if (formGroup.get('user_name')?.getError('maxlength')) {
     <div class="alert-danger">
       <i class="fas fa-circle-exclamation"></i>
-      Username must be less than 20 characters
+      User Name must be less than 20 characters
     </div>
   }
 }

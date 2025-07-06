@@ -50,15 +50,15 @@
   <h3>Get in Touch</h3>
 
   <!-- First Name -->
-  <input type="text" placeholder="First name" formControlName="first_name" />
-  @if (contactForm.get('first_name')?.errors && contactForm.get('first_name')?.touched) {
-    @if (contactForm.get('first_name')?.getError('required')) {
+  <input type="text" placeholder="First name" formControlName="user_name" />
+  @if (contactForm.get('user_name')?.errors && contactForm.get('user_name')?.touched) {
+    @if (contactForm.get('user_name')?.getError('required')) {
       <div class="alert-danger">
         <i class="fas fa-circle-exclamation"></i>
         Name is required
       </div>
     }
-    @else if (contactForm.get('first_name')?.getError('minlength')) {
+    @else if (contactForm.get('user_name')?.getError('minlength')) {
       <div class="alert-danger">
         <i class="fas fa-circle-exclamation"></i>
         Name must be at least 2 characters
@@ -110,18 +110,18 @@
   }
 
   <!-- Message -->
-  <textarea rows="4" placeholder="How can we help?" formControlName="message"></textarea>
-  @if (contactForm.get('message')?.errors && contactForm.get('message')?.touched) {
-    @if (contactForm.get('message')?.getError('required')) {
+  <textarea rows="4" placeholder="How can we help?" formControlName="problem"></textarea>
+  @if (contactForm.get('problem')?.errors && contactForm.get('problem')?.touched) {
+    @if (contactForm.get('problem')?.getError('required')) {
       <div class="alert-danger">
         <i class="fas fa-circle-exclamation"></i>
-        Message is required
+        problem is required
       </div>
     }
-    @else if (contactForm.get('message')?.getError('minlength')) {
+    @else if (contactForm.get('problem')?.getError('minlength')) {
       <div class="alert-danger">
         <i class="fas fa-circle-exclamation"></i>
-        Message must be at least 10 characters
+        problem must be at least 10 characters
       </div>
     }
   }

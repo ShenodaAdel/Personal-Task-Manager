@@ -23,7 +23,7 @@ export class RegisterComponent  implements OnInit {
 
   formGroup=new FormGroup({
     email: new FormControl(null, [Validators.required, Validators.email]),
-    userName: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
+    user_name: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
     password: new FormControl(null, [
       Validators.required,
       Validators.pattern('^(?=[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\\-={}\\[\\]:;"\'<>,.?/~`]).{8,}$')
@@ -35,7 +35,7 @@ export class RegisterComponent  implements OnInit {
       const user = this.formGroup.value;
       console.log('User registered:', user);
       // Check if user already exists
-      const existingUser = this.userInfo.find(u => u.email === user.email && u.userName === user.userName && u.password === user.password);
+      const existingUser = this.userInfo.find(u => u.email === user.email && u.user_name === user.user_name && u.password === user.password);
       if (existingUser) {
         this.toastrService.error('User already exists!');
       } else {

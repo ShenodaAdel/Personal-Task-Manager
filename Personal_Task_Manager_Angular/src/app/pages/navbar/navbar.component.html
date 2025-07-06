@@ -1,6 +1,6 @@
 <div class="topbar">
   <div class="welcome">
-    <h4>Welcome back, {{user.userName}}</h4>
+    <h4>Welcome back, {{this.user.user_name}}</h4>
   </div>
 
   <div class="search">
@@ -18,8 +18,7 @@
 
 
     <div class="user">
-      <a routerLink="/profile"> <img [src]="user.UploadedFile" alt="userphoto"></a>
-
+      <a routerLink="/profile"> <img [src]="this.user.image" alt="userphoto"></a>
     </div>
 
     <button class="create-task-btn" (click)="openModal()">

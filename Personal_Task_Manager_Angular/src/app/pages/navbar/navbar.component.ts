@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ITask } from '../../core/interface/itasks';
-import { IUser } from '../../core/interface/i-user';
+import { User } from '../../core/interface/i-user';
 import { UserServiceService } from '../../core/service/userService/user.service';
 import { TaskService } from '../../core/service/Task/task.service';
 import { platformBrowser } from '@angular/platform-browser';
@@ -24,7 +24,11 @@ export class NavbarComponent implements OnInit {
   private readonly helpService=inject(HelpService);
   isOpen: boolean = false;
   tasks: ITask[] = [];
-  user: IUser = {} as IUser;
+  user: User = new User();
+
+
+
+
   taskName: string = '';
   startDate: string = '';
   deadline: string = '';

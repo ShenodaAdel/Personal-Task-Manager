@@ -1,7 +1,7 @@
-export interface IUser {
-  userName: string;
-  email: string;
-  PhoneNumber: string;
-  Address: string;
-  UploadedFile: string; // ده Base64 لصورة
+export class User {
+  user_name!: string;
+  email!: string;
+  phone!: string;
+  address!: string;
+  image!: File;
 }

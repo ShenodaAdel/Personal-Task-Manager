@@ -5,17 +5,17 @@
     <!-- الصورة الشخصية -->
     <div class="left-side">
       <div class="avatar">
-        <img [src]="User.UploadedFile" alt="Profile Picture">
+        <img [src]="this.user.image" alt="Profile Picture">
       </div>
 
     </div>
 
     <!-- بيانات المستخدم -->
     <div class="right-side">
-      <p><strong>Name:</strong>{{User.userName}}</p>
-      <p><strong>Email:</strong>{{User.email}}</p>
-      <p><strong>Phone Number:</strong>{{User.PhoneNumber}}</p>
-      <p><strong>Address:</strong>{{User.Address}}</p>
+      <p><strong>Name:</strong>{{this.user.user_name}}</p>
+      <p><strong>Email:</strong>{{this.user.email}}</p>
+      <p><strong>Phone Number:</strong>{{this.user.phone}}</p>
+      <p><strong>Address:</strong>{{this.user.address}}</p>
 
       <!-- زر تعديل البيانات -->
       <div class="edit-button">
