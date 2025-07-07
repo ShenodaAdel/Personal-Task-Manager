@@ -92,7 +92,7 @@ export class TasksComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    localStorage.removeItem('taskData');
+ 
     if (isPlatformBrowser(this.platformId)) {
       this.tasks = JSON.parse(localStorage.getItem('taskData') || '[]');
 

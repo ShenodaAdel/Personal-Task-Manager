@@ -5,21 +5,21 @@
 <!-- key [task] ,value -->
     @for(task of taskCompleted ;track $index){
     <div class="task">
-      <div class="title"><i class="fas fa-tasks"></i> {{task.task.TaskName}}</div>
+      <div class="title"><i class="fas fa-tasks"></i> {{task.task.task_name}}</div>
       <div class="meta">
-        <span class="meta-item type"><i class="fas fa-layer-group"></i> Category:{{task.task.Category}}</span>
+        <span class="meta-item type"><i class="fas fa-layer-group"></i> Category:{{task.task.category}}</span>
      
 
           <span class="meta-item type">
             <i class="fas fa-calendar-alt"></i>
-            Start: {{task.task.StartDate | date}}
+            Start: {{task.task.start_date| date}}
           </span>
-           <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: {{task.task.Deadline | date}}</span>
+           <span class="meta-item deadline"><i class="fas fa-calendar-alt"></i> Deadline: {{task.task.deadline | date}}</span>
         </div>
 
        
     
-      <div class="description">{{task.task.Description}}</div>
+      <div class="description">{{task.task.description}}</div>
       <div class="progress">
         <div class="progress-bar" style="width: 75%; background-color: #17a2b8;"></div>
       </div>
