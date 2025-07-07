@@ -2,7 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { User } from '../../core/interface/i-user';
+import { User } from '../../core/interface/CUser';
 import { UserServiceService } from '../../core/service/userService/user.service';
 
 

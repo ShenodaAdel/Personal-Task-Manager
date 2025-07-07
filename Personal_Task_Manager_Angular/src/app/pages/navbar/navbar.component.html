@@ -35,24 +35,24 @@
     <div class="row">
       <div class="form-group">
         <label for="taskName"><i class="fas fa-tasks label-icon"></i> Task Name</label>
-        <input id="taskName" type="text" placeholder="Enter task name" [(ngModel)]="taskName" name="taskName">
+        <input id="taskName" type="text" placeholder="Enter task name" [(ngModel)]="task.task_name" name="taskName">
       </div>
 
       <div class="form-group">
         <label for="startDate"><i class="fas fa-play label-icon"></i> Start Date</label>
-        <input id="startDate" type="date" [(ngModel)]="startDate" name="startDate">
+        <input id="startDate" type="date" [(ngModel)]="task.start_date" name="startDate">
       </div>
     </div>
 
     <div class="row">
       <div class="form-group">
         <label for="deadline"><i class="fas fa-hourglass-end label-icon"></i> Deadline</label>
-        <input id="deadline" type="date" [(ngModel)]="deadline" name="deadline">
+        <input id="deadline" type="date" [(ngModel)]="task.deadline" name="deadline">
       </div>
 
       <div class="form-group">
         <label for="status"><i class="fas fa-tasks label-icon"></i> Status</label>
-        <select id="status" [(ngModel)]="status" name="status">
+        <select id="status" [(ngModel)]="task.status" name="status">
           <option value="Completed">Completed</option>
           <option value="Pending">Pending</option>
           <option value="In Progress">In Progress</option>
@@ -63,7 +63,7 @@
     <div class="row">
       <div class="form-group">
         <label for="category"><i class="fas fa-list label-icon"></i> Category</label>
-        <select id="category" [(ngModel)]="category" name="category">
+        <select id="category" [(ngModel)]="task.category" name="category">
           <option value="">Select Category</option>
           <option value="Management">Management</option>
           <option value="Development">Development</option>
@@ -81,7 +81,7 @@
     <div class="row">
       <div class="form-group full-width">
         <label for="description"><i class="fas fa-align-left label-icon"></i> Description</label>
-        <textarea id="description" placeholder="Enter task description" [(ngModel)]="description"
+        <textarea id="description" placeholder="Enter task description" [(ngModel)]="task.description"
           name="description"></textarea>
       </div>
     </div>

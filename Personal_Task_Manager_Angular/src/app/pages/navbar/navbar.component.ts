@@ -3,8 +3,8 @@ import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ITask } from '../../core/interface/itasks';
-import { User } from '../../core/interface/i-user';
+import { Task } from '../../core/interface/CTasks';
+import { User } from '../../core/interface/CUser';
 import { UserServiceService } from '../../core/service/userService/user.service';
 import { TaskService } from '../../core/service/Task/task.service';
 import { platformBrowser } from '@angular/platform-browser';
@@ -23,22 +23,52 @@ export class NavbarComponent implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly helpService=inject(HelpService);
   isOpen: boolean = false;
-  tasks: ITask[] = [];
+  tasks: Task[] = [];
+  task:Task =new Task();
   user: User = new User();
-
-
-
-
-  taskName: string = '';
-  startDate: string = '';
-  deadline: string = '';
-  description: string = '';
-  category: string = '';
-  attachedFile!: File;
-  status: string = '';
   filePreviewUrl: string = ''; // لو حابة تعرضي اسم الملف أو تفاصيله
   numberNotification: any[] = [];
-  ngOnInit(): void {
+  openModal(): void {
+    this.isOpen = true;
+  }
+  closeModal(): void {
+    this.isOpen = false;
+  }
+
+  onFileChange(e: Event): void {
+    const input = e.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      this.task.upload_file = input.files[0];
+      this.filePreviewUrl = this.task.upload_file.name;
+      console.log('Selected file:', this.task.upload_file);
+    }
+  }
+
+  submitTask(): void {
+    const file = this.task.upload_file;
+    if (file) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+          (this.task as any).upload_file = reader.result as string;
+        console.log('Base64 File:', (this.task as any).upload_file);
+        const formData = new FormData();
+        formData.append('Tasks', JSON.stringify(this.task));
+        this.tasks.push(this.task);
+        localStorage.setItem('taskData', JSON.stringify(this.tasks));
+        this.taskService.upadateTask(this.tasks);
+        this.toastrService.success("Task added successfully", "Success");
+        this.closeModal();
+      
+
+
+      };
+
+    } else {
+      this.toastrService.error('Please attach a file.');
+    }
+  }
+    ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.tasks = JSON.parse(localStorage.getItem('taskData') || '[]');
 
@@ -64,63 +94,6 @@ export class NavbarComponent implements OnInit {
 
     }
 
-  }
-  openModal(): void {
-    this.isOpen = true;
-  }
-  closeModal(): void {
-    this.isOpen = false;
-  }
-
-  onFileChange(e: Event): void {
-    const input = e.target as HTMLInputElement;
-    if (input.files && input.files.length > 0) {
-      this.attachedFile = input.files[0];
-      this.filePreviewUrl = this.attachedFile.name;
-      console.log('Selected file:', this.attachedFile);
-    }
-  }
-
-  submitTask(): void {
-    const file = this.attachedFile;
-    if (file) {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        const base64File = reader.result as string;
-        console.log('Base64 File:', base64File);
-        const formData = new FormData();
-        formData.append('TaskName', this.taskName);
-        formData.append('StartDate', this.startDate);
-        formData.append('Deadline', this.deadline);
-        formData.append('Description', this.description);
-        formData.append('Category', this.category);
-        formData.append('Status', this.status);
-        formData.append('AttachedFile', base64File);
-        console.log('Task FormData:', formData);
-        const taskObject: any = {};
-        formData.forEach((value, key) => {
-          taskObject[key] = value;
-        });
-        console.log('Task Object:', taskObject);
-        this.tasks.push(taskObject);
-        localStorage.setItem('taskData', JSON.stringify(this.tasks));
-        this.taskService.upadateTask(this.tasks);
-        this.toastrService.success("تمت إضافة المهمة بنجاح", "نجاح");
-        this.closeModal();
-        this.taskName = '';
-        this.startDate = '';
-        this.deadline = '';
-        this.description = '';
-        this.category = '';
-        this.status = '';
-
-
-      };
-
-    } else {
-      this.toastrService.error('Please attach a file.');
-    }
   }
 }
 

@@ -1,6 +1,6 @@
 import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-import { ITask } from '../../core/interface/itasks';
+import { Task } from '../../core/interface/CTasks';
 import { ToastrService } from 'ngx-toastr';
 import { DatePipe, isPlatformBrowser } from '@angular/common';
 
@@ -15,8 +15,8 @@ private readonly toastrService=inject(ToastrService);
 private readonly router=inject(Router);
   private readonly activatedRoute=inject(ActivatedRoute);
      private readonly platformId=inject(PLATFORM_ID);
-  AllTasks: ITask[] = [];
-  task: ITask = {} as ITask;
+  AllTasks: Task[] = [];
+  task: Task = {} as Task;
   id!: string | null;
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {

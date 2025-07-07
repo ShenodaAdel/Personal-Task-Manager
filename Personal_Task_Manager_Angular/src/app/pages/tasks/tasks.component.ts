@@ -6,7 +6,7 @@ import { DatePipe, isPlatformBrowser, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { RouterLink } from '@angular/router';
-import { ITask } from '../../core/interface/itasks';
+import { Task } from '../../core/interface/CTasks';
 
 import { pipe } from 'rxjs';
 import { TaskService } from '../../core/service/Task/task.service';
@@ -23,15 +23,8 @@ export class TasksComponent implements OnInit {
   private readonly taskService = inject(TaskService);
   private readonly platformId = inject(PLATFORM_ID);
   isOpen: boolean = false;
-  tasks: ITask[] = [];
-  task: ITask = new ITask();
-  taskName: string = '';
-  startDate: string = '';
-  deadline: string = '';
-  description: string = '';
-  category: string = '';
-  status: string = 'In Progress'; // يمكنك تغيير الحالة الافتراضية حسب الحاجة
-  attachedFile!: File;
+  task: Task = new Task();
+  tasks: Task[] = [];
   filePreviewUrl: string = ''; // لو حابة تعرضي اسم الملف أو تفاصيله
   Ncompleted: number = 0;
   NinProgress: number = 0;
@@ -47,46 +40,28 @@ export class TasksComponent implements OnInit {
   onFileChange(e: Event): void {
     const input = e.target as HTMLInputElement;
     if (input.files && input.files.length > 0) {
-      this.attachedFile = input.files[0];
-      this.filePreviewUrl = this.attachedFile.name;
-      console.log('Selected file:', this.attachedFile);
+      this.task.upload_file = input.files[0];
+      this.filePreviewUrl = this.task.upload_file.name;
+      console.log('Selected file:', this.task.upload_file);
     }
   }
   submitTask(): void {
-    const file = this.attachedFile;
+    const file = this.task.upload_file;
     if (file) {
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = () => {
-        const base64File = reader.result as string;
-        console.log('Base64 File:', base64File);
+        // const base64File = reader.result as string;
+        (this.task as any).upload_file = reader.result as string;
+        console.log('Base64 File:', (this.task as any).upload_file);
         const formData = new FormData();
-        formData.append('TaskName', this.taskName);
-        formData.append('StartDate', this.startDate);
-        formData.append('Deadline', this.deadline);
-        formData.append('Description', this.description);
-        formData.append('Category', this.category);
-        formData.append('Status', this.status);
-        formData.append('AttachedFile', base64File);
-        console.log('Task FormData:', formData);
-        const taskObject: any = {};
-        formData.forEach((value, key) => {
-          taskObject[key] = value;
-        });
-        console.log('Task Object:', taskObject);
-        this.tasks.push(taskObject);
+        formData.append('Tasks', JSON.stringify(this.task));
+        this.tasks.push(this.task);
         localStorage.setItem('taskData', JSON.stringify(this.tasks));
         this.taskService.upadateTask(this.tasks);
         this.toastrService.success("تمت إضافة المهمة بنجاح", "نجاح");
         this.closeModal();
-        this.taskName = '';
-        this.startDate = '';
-        this.deadline = '';
-        this.description = '';
-        this.category = '';
-        this.status = '';
-
-
+        this.task = new Task();
       };
 
     } else {
@@ -98,7 +73,7 @@ export class TasksComponent implements OnInit {
     this.tasks.splice(index, 1);
     localStorage.setItem('taskData', JSON.stringify(this.tasks));
     console.log('Updated tasks after deletion:', this.tasks);
-    this.toastrService.success("تم حذف المهمة بنجاح", "نجاح");
+    this.toastrService.success("Task deleted successfully", "Success");
     this.updateCounters();
   }
   updateCounters(): void {
@@ -107,9 +82,9 @@ export class TasksComponent implements OnInit {
     this.Npending = 0;
 
     for (let task of this.tasks) {
-      if (task.Status === 'Completed') {
+      if (this.task.status === 'Completed') {
         this.Ncompleted++;
-      } else if (task.Status === 'In Progress') {
+      } else if (this.task.status === 'In Progress') {
         this.NinProgress++;
       } else {
         this.Npending++;
@@ -117,6 +92,7 @@ export class TasksComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+    localStorage.removeItem('taskData');
     if (isPlatformBrowser(this.platformId)) {
       this.tasks = JSON.parse(localStorage.getItem('taskData') || '[]');
 

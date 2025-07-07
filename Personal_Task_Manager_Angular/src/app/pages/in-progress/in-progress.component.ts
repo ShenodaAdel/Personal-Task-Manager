@@ -1,7 +1,7 @@
 import { DatePipe, isPlatformBrowser } from '@angular/common';
 import { Component, inject, PLATFORM_ID } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { ITask } from '../../core/interface/itasks';
+import { Task } from '../../core/interface/CTasks';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -13,8 +13,8 @@ import { RouterLink } from '@angular/router';
 export class InProgressComponent {
   private readonly toastrService=inject(ToastrService);
    private readonly platformId=inject(PLATFORM_ID);
-taskCompleted: { task: ITask; index: number }[] = [];
-allTask:ITask[]=[]; //true index
+taskCompleted: { task: Task; index: number }[] = [];
+allTask:Task[]=[]; //true index
   deleteTask(index: number): void {
     console.log(index);
   const deletedEntry = this.taskCompleted[index];
@@ -32,7 +32,7 @@ allTask:ITask[]=[]; //true index
     }
     console.log(this.allTask);
     for (let i=0 ; i< this.allTask.length ;i++ ) {
-      if (this.allTask[i].Status === 'In Progress') {
+      if (this.allTask[i].status === 'In Progress') {
         this.taskCompleted.push({ task: this.allTask[i], index: i });
       }
     }

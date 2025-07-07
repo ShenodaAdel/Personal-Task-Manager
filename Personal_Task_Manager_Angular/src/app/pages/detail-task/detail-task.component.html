@@ -1,12 +1,12 @@
 <div class="task-detail-card">
   <!-- اسم المهمة -->
-  <h2 class="task-title"><i class="fas fa-tasks"></i> {{task.TaskName}} :</h2>
-  <p class="task-description">{{task.Description}}</p>
+  <h2 class="task-title"><i class="fas fa-tasks"></i> {{task.task_name}} :</h2>
+  <p class="task-description">{{task.description}}</p>
 
   <!-- الوصف -->
   <div class="img-block">
     <i class="fas fa-align-left label-icon"></i>
-    <img [src]="task.AttachedFile" alt="Task Image">
+    <img [src]="task.upload_file" alt="Task Image">
   </div>
 
   <!-- باقي البيانات 2 عمود -->
@@ -14,22 +14,22 @@
   
      <div class="info-item">
       <i class="fas fa-folder-open label-icon"></i>
-      <strong>Category:</strong> {{task.Category}}
+      <strong>Category:</strong> {{task.category}}
     </div>
     <div class="info-item">
       <i class="fas fa-check-circle label-icon"></i>
       <strong>Status:</strong> 
-      <span class="status">{{task.Status}}</span>
+      <span class="status">{{task.status}}</span>
 
     </div>
     <div class="info-item">
       <i class="fas fa-clock label-icon"></i>
-      <strong>Start Date:</strong> {{task.StartDate | date}}
+      <strong>Start Date:</strong> {{task.start_date| date}}
     </div>
  
     <div class="info-item">
       <i class="fas fa-calendar-alt label-icon"></i>
-      <strong>Deadline:</strong> {{task.Deadline | date}}
+      <strong>Deadline:</strong> {{task.deadline| date}}
     </div>
    
 
